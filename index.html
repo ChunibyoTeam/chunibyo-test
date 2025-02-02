@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 中二病診断 </title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-section h3 {
+      margin-top: 15px;
+      font-size: 1.1em;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 0.95em;
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h1>中二病診断</h1>
+　<h3>できるだけ正直に答えてください。深く考えすぎず、直感で選ぶとより正確な診断ができます。</h3>
+  <form id="quizForm">
+    <!-- Aフォーム -->
+    <div class="form-section">
+      <h2></h2>
+　　　<h3>　自分には潜在能力があると信じている。</h3>
+　　<label><input type="radio" name="A1" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="A1" value="0"> 当てはまらない</label>
+
+　　　<h3>　二重人格を演じていたことがある。</h3>
+　　<label><input type="radio" name="A2" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="A2" value="0"> 当てはまらない</label>
+
+　　　<h3>　妖精や動物、植物と会話ができる。</h3>
+　　<label><input type="radio" name="A3" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="A3" value="0"> 当てはまらない</label>
+
+　　　<h3>　自転車などの自分の所有物に愛称をつけたことがある。</h3>
+　　<label><input type="radio" name="A4" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A4" value="0"> 当てはまらない</label>
+
+　　　<h3>　アニメや漫画を見ながら、「自分だったらこうする」と考えたことがある。</h3>
+　　<label><input type="radio" name="A5" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A5" value="0"> 当てはまらない</label>
+
+　　　<h3>　デスノートの主人公など、知的で反社会的なキャラクターに自己投影したことがある。</h3>
+　　<label><input type="radio" name="A6" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A6" value="0"> 当てはまらない</label>
+
+　　　<h3>デスゲーム漫画を読み、その世界観の中で自分だけが生き残る妄想をしたことがある。</h3>
+　　<label><input type="radio" name="A7" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A7" value="0"> 当てはまらない</label>
+
+　　　<h3>　ガンシューティングゲームをしたり、アクション映画を見たあとに、自分も本当に強くなったかのように感じたことがある。</h3>
+　　<label><input type="radio" name="A8" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A8" value="0"> 当てはまらない</label>
+
+　　　<h3>　「人間嫌い」を自称していた時期がある。</h3>
+　　<label><input type="radio" name="A9" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A9" value="0"> 当てはまらない</label>
+
+　　　<h3>　脳内で恋人や友人を創造し、設定についても考えたことがある。</h3>
+　　<label><input type="radio" name="A10" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A10" value="0"> 当てはまらない</label>
+
+　　　<h3>　特定の人物やキャラクターを悪役として認定し、アンチ活動をしたことがある。</h3>
+　　<label><input type="radio" name="A11" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A11" value="0"> 当てはまらない</label>
+
+　　　<h3>　風邪の時、心配してほしいという気持ちや、注目されたいという気持ちから、大げさに咳き込んだことがある。</h3>
+　　<label><input type="radio" name="A12" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A12" value="0"> 当てはまらない</label>
+
+　　　<h3>　人が死ぬ創作物が好きだ。</h3>
+　　<label><input type="radio" name="A13" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="A13" value="0"> 当てはまらない</label>
+　  </div>
+
+    <!-- Bフォーム -->
+    <div class="form-section">
+      <h2></h2>
+　　　<h3>　突然やさぐれてみたことがある。</h3>
+　　<label><input type="radio" name="B1" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="B1" value="0"> 当てはまらない</label>
+
+　　　<h3>　規律を乱すことそれ自体に執着したことがある。</h3>
+　　<label><input type="radio" name="B2" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="B2" value="0"> 当てはまらない</label>
+        
+　　　<h3>　存在しない喧嘩の武勇伝を自慢したことがある。</h3>
+　　<label><input type="radio" name="B3" value="1" required> 当てはまる</label>
+　　<label><input type="radio" name="B3" value="0"> 当てはまらない</label>
+        
+　　　<h3>　ハッタリの強さを誇示したことがある。</h3>
+　　<label><input type="radio" name="B4" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B4" value="0"> 当てはまらない</label>
+
+　　　<h3>　問題児のように扱われたい。</h3>
+　　<label><input type="radio" name="B5" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B5" value="0"> 当てはまらない</label>
+
+　　　<h3>　不良系漫画のキャラクターに憧れを感じたことがある。</h3>
+　　<label><input type="radio" name="B6" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B6" value="0"> 当てはまらない</label>
+
+　　　<h3>　年上の人と遊ぶ事が多い。</h3>
+　　<label><input type="radio" name="B7" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B7" value="0"> 当てはまらない</label>
+
+　　　<h3>　裏社会の知識に詳しい自負がある。</h3>
+　　<label><input type="radio" name="B8" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B8" value="0"> 当てはまらない</label>
+
+　　　<h3>　マフィア映画が好きだ。</h3>
+　　<label><input type="radio" name="B9" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B9" value="0"> 当てはまらない</label>
+
+　　　<h3>　社会的地位には囚われない。</h3>
+　　<label><input type="radio" name="B10" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B10" value="0"> 当てはまらない</label>
+
+　　　<h3>　周りからの評価を気にしている。</h3>
+　　<label><input type="radio" name="B11" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B11" value="0"> 当てはまらない</label>
+
+　　　<h3>　誰も本当の自分をわかっていないと感じたことがある。</h3>
+　　<label><input type="radio" name="B12" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B12" value="0"> 当てはまらない</label>
+
+　　　<h3>　大人を敵視している。</h3>
+　　<label><input type="radio" name="B13" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="B13" value="0"> 当てはまらない</label>
+    </div>
+
+    <!-- Cフォーム -->
+    <div class="form-section">
+　　　<h2></h2>
+　　　<h3>　読む雑誌や漫画の趣味はあまり他人と合わないが、それに優越感を感じている。</h3>
+　　　<label><input type="radio" name="C1" value="1" required> 当てはまる</label>
+　　　<label><input type="radio" name="C1" value="0"> 当てはまらない</label>
+
+　　　<h3>　「大人っぽく見られたい」という理由で、コーヒーを無理して飲んだことがある。</h3>
+　　　<label><input type="radio" name="C2" value="1" required> 当てはまる</label>
+　　　<label><input type="radio" name="C2" value="0"> 当てはまらない</label>
+
+　　　<h3>　クリエイターに憧れを持ち、パソコンはmacを好んでいる。</h3>
+　　　<label><input type="radio" name="C3" value="1" required> 当てはまる</label>
+　　　<label><input type="radio" name="C3" value="0"> 当てはまらない</label>
+
+　　　<h3>　新しいものより古いもののほうが好きだ。</h3>
+　　<label><input type="radio" name="C4" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C4" value="0"> 当てはまらない</label>
+        
+　　　<h3>　メディアから得た情報をあたかも自分がソース元かのように話す。</h3>
+　　<label><input type="radio" name="C5" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C5" value="0"> 当てはまらない</label>
+
+　　　<h3>　何事も上から目線で物事を語る。</h3>
+　　<label><input type="radio" name="C6" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C6" value="0"> 当てはまらない</label>
+
+　　　<h3>　人間や愛について自分なりの価値観を持つ。</h3>
+　　<label><input type="radio" name="C7" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C7" value="0"> 当てはまらない</label>
+        
+　　　<h3>　ハッピーエンドよりバッドエンドが好きだ。</h3>
+　　<label><input type="radio" name="C8" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C8" value="0"> 当てはまらない</label>
+
+　　　<h3>　グロ系の要素を持つ作品が好きだ。</h3>
+　　<label><input type="radio" name="C9" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C9" value="0"> 当てはまらない</label>
+
+　　　<h3>　あるバンドや漫画に人気が出始めると途端に興味をなくしたことがある。</h3>
+　　<label><input type="radio" name="C10" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C10" value="0"> 当てはまらない</label>
+
+　　　<h3>　古着にこだわりを持っている。</h3>
+　　<label><input type="radio" name="C11" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C11" value="0"> 当てはまらない</label>
+
+　　　<h3>　話に否定から入ることが多い。</h3>
+　　<label><input type="radio" name="C12" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C12" value="0"> 当てはまらない</label>
+
+　　　<h3>　とりあえず政府が悪いと思っている。</h3>
+　　<label><input type="radio" name="C13" value="1"> 当てはまる</label>
+　　<label><input type="radio" name="C13" value="0"> 当てはまらない</label>
+    </div>
+
+
+      
+<button type="button" onclick="showResult()">診断結果を見る</button>
+</form>
+<script>
+  function showResult() {
+    const form = document.querySelector('#quizForm');
+
+    if (!form || !(form instanceof HTMLFormElement)) {
+      console.error("Form element is not properly loaded.");
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    let pointsA = 0, pointsB = 0, pointsC = 0;
+    for (const [key, value] of formData.entries()) {
+      if (key.startsWith('A')) pointsA += parseInt(value);
+      else if (key.startsWith('B')) pointsB += parseInt(value);
+      else if (key.startsWith('C')) pointsC += parseInt(value);
+    }
+
+    // トータルポイントを計算
+    const totalPoints = pointsA + pointsB + pointsC;
+
+    console.log(`PointsA: ${pointsA}, PointsB: ${pointsB}, PointsC: ${pointsC}, Total: ${totalPoints}`);
+
+    // 診断結果の判定
+    if (totalPoints <= 4) {
+      window.location.href = "result_no_chunibyo.html"; // 中二病ではない
+    } else if (pointsA === pointsB && pointsB === pointsC) {
+      window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=B=C)
+    } else if (pointsA === pointsB || pointsA === pointsC) {
+      window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=B または A=C)
+    } else if (pointsB === pointsC) {
+      window.location.href = "result_subculture.html"; // サブカル系中二病 (B=C)
+    } else if (pointsA > pointsB && pointsA > pointsC) {
+      window.location.href = "result_evil_eye.html"; // 邪気眼系中二病
+    } else if (pointsB > pointsA && pointsB > pointsC) {
+      window.location.href = "result_dqn.html"; // DQN系中二病
+    } else if (pointsC > pointsA && pointsC > pointsB) {
+      window.location.href = "result_subculture.html"; // サブカル系中二病
+    }
+  }
+</script>
+
+</body>
+</html>
