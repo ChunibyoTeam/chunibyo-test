@@ -176,6 +176,43 @@
     　<li>    
         <a href= "https://magcomi.com/episode/10834108156766291310" >迷宮ブラックカンパニー第一話</a>
 
+      <h2>コメントを投稿</h2>
+<form id="commentForm">
+  <label for="name">名前（ニックネームOK）:</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="comment">コメント:</label>
+  <textarea id="comment" name="comment" required></textarea><br>
+
+  <button type="submit">送信</button>
+</form>
+
+<p id="responseMessage"></p>
+
+<script>
+  document.getElementById("commentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+
+    fetch("https://script.google.com/macros/s/AKfycbw09m9pQCUF2LuwntavNMMaQy9tg9tUv4_Pgn_vnxMBx81h7oPecIAXJb6043PX39Fy/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name, comment: comment })
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("responseMessage").textContent = "コメントが送信されました！";
+      document.getElementById("commentForm").reset();
+    })
+    .catch(error => {
+      console.error("エラー:", error);
+      document.getElementById("responseMessage").textContent = "送信に失敗しました。";
+    });
+  });
+</script>
+
     </div>
   </div>
 </body>
