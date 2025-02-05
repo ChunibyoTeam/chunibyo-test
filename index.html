@@ -259,7 +259,6 @@
     const totalPoints = pointsA + pointsB + pointsC;
 
     console.log(`PointsA: ${pointsA}, PointsB: ${pointsB}, PointsC: ${pointsC}, Total: ${totalPoints}`);
-
 // 診断結果の判定
 if (totalPoints <= 4) {
   window.location.href = "result_no_chunibyo.html"; // 中二病ではない
@@ -269,15 +268,14 @@ if (totalPoints <= 4) {
   window.location.href = "result_dqn.html"; // DQN系中二病 (Bが最大)
 } else if (pointsC > pointsA && pointsC > pointsB) {
   window.location.href = "result_subculture.html"; // サブカル系中二病 (Cが最大)
-} else if (pointsA === pointsB && pointsB === pointsC) {
-  window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=B=C)
-} else if (pointsA === pointsB) {
-  window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=B)
-} else if (pointsA === pointsC) {
-  window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=C)
-} else if (pointsB === pointsC) {
-  window.location.href = "result_subculture.html"; // サブカル系中二病 (B=C)
+} else if (pointsA === pointsB && pointsA > pointsC && pointsB > pointsC) {
+  window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=B かつ A, B > C)
+} else if (pointsA === pointsC && pointsA > pointsB && pointsC > 0) {
+  window.location.href = "result_evil_eye.html"; // 邪気眼系中二病 (A=C かつ A > B かつ C > 0)
+} else if (pointsB === pointsC && pointsB > pointsA && pointsC > 0) {
+  window.location.href = "result_subculture.html"; // サブカル系中二病 (B=C かつ B > A かつ C > 0)
 }
+
 
   }
 </script>
