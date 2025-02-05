@@ -112,45 +112,7 @@
       </li>
     </ul>
 
-<form id="commentForm">
-  <h2>コメントを投稿</h2>
-  <label for="name">名前:</label>
-  <input type="text" id="name" name="name" required><br>
 
-  <label for="comment">コメント:</label>
-  <textarea id="comment" name="comment" rows="4" required></textarea><br>
-
-  <button type="submit">送信</button>
-</form>
-
-<p id="responseMessage"></p>
-
-<script>
-document.getElementById("commentForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const comment = document.getElementById("comment").value;
-
-  fetch("<<https://script.google.com/macros/s/AKfycbxaHZgkyYrrO6XBautDPGONAIpL_4XMvvJ49NbjlZl8nzsnddoq5Jml1Hm1cST6jyCa/exec>>", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json" // ヘッダーを明示的に設定
-    },
-    body: JSON.stringify({
-      name: name,
-      comment: comment
-    })
-  })
-  .then(response => response.text())
-  .then(data => {
-    alert(data); // 成功・エラーメッセージを表示
-  })
-  .catch(error => {
-    alert("通信エラーが発生しました: " + error);
-  });
-});
-</script>
   </main>
 </body>
 </html>
